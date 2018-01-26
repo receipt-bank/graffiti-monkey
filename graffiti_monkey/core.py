@@ -125,10 +125,6 @@ class GraffitiMonkey(object):
                 value = instance_tags[tag_name]
                 tags_to_set[tag_name] = value
 
-        # Additional tags
-        tags_to_set['instance_id'] = instance_id
-        tags_to_set['device'] = device
-
         if self._dryrun:
             log.info('DRYRUN: Volume %s would have been tagged %s', volume.id, tags_to_set)
         else:
